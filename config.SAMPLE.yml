@@ -1,0 +1,37 @@
+################################################
+# Config file for setting up tender-autoresolve
+# Rename to 'config.yml'
+################################################
+ 
+# the tender api url
+api_url: api.tenderapp.com
+# the name of your project in the tender api
+project_path: myprojectname
+
+#http headers
+headers:
+  # your tender api key
+  X-Tender-Auth:  vtw5098wt7fw590jt8j5897034j58f30948jf3
+  Accept:         application/vnd.tender-v1+json
+  Content-Type:   application/json
+  
+# Discussion states to resolve
+states:
+  - open
+  - pending
+  - new
+  
+# Number of days after which a discussion should be marked as resolved
+time_period:    30
+
+# resolve quietly (don't post a notification comment)
+quiet_resolve:  false
+
+# data to be sent when POSTing a resolution message
+# not needed if resolving quietly
+form_data:
+  author_name:  system
+  author_email: support@mysite.com
+  body:         This discussion has been inactive for 30 days and has automatically been marked as resolved.
+  resolution:   true 
+  skip_spam:    true
