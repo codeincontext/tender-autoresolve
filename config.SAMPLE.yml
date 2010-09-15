@@ -35,3 +35,10 @@ form_data:
   body:         This discussion has been inactive for 30 days and has automatically been marked as resolved.
   resolution:   true 
   skip_spam:    true
+
+# Uncomment to check the date on every discussion (slow)
+# Possibly needed if the order of items in the api changes or for debugging
+# scan_everything: true
+
+# Uncomment for verbose printout
+# verbose: true
