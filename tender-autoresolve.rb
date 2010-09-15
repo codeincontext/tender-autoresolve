@@ -43,6 +43,7 @@ def scan_page(state, page)
   continue = false
 	parsed['discussions'].reverse.each do |discussion|
     continue = scan_discussion discussion
+    continue = true if CFG['scan_everything']==true
     break unless continue
 	end
 	continue
