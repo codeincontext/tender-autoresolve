@@ -55,7 +55,7 @@ def scan_state(state)
   parsed = JSON::parse response.body
 
   per_page = parsed['per_page']
-  pages = (parsed['total'] / per_page) + 1
+  pages = (parsed['total'].to_f / per_page.to_f).ceil
 
   # Scan all pages until the discussions are newer than the time period
   pages.downto(1) do |page|
