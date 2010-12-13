@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'json'
-require 'active_support'
+require 'active_support/core_ext'
 require 'net/http'
 
 CFG = YAML.load_file("config.yml")
